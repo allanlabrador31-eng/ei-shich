@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #0f172a;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-arcade {
+  font-family: 'Press Start 2P', monospace, cursive;
+}
+
+/* Custom text stroke for retro arcade scores */
+.retro-text-stroke {
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.retro-text-stroke-lg {
+  -webkit-text-stroke: 3px #000;
+  text-shadow: 3px 3px 0 #000;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 2.4s ease-in-out infinite;
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 1.8s ease-in-out infinite;
+}

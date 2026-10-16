@@ -1,0 +1,6 @@
+{
+  "name": "Flappy Allan",
+  "description": "Fly as Hachiware from Chiikawa through a Minecraft world! Avoid the blocky pipes or face Allan's legendary penalty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
