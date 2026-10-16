@@ -32,18 +32,8 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
   else if (score >= 20) medal = 'silver';
   else if (score >= 10) medal = 'bronze';
 
-  // Allan's funny commentary
-  const getAllanComment = (s: number) => {
-    if (s === 0) return 'eii shichh u lose';
-    if (s < 5) return 'eii shichh u lose! Walang kawala kay Allan!';
-    if (s < 10) return 'Muntik na makalampas, pero rules are rules!';
-    if (s < 20) return 'Decent try, pero amoy Allan pa rin ang kahihinatnan!';
-    if (s < 35) return 'Galing lumipad! Pero nabangga pa rin, kaya alam mo na!';
-    return 'LODI FLAPPER! Halimaw ang score pero si Allan naghihintay pa rin!';
-  };
-
   const handleShare = () => {
-    const text = `Naka-score ako ng ${score} sa Flappy Hachiware in Minecraft! Sabi sa akin: "kelangan mo na paamoy pwet mo kay allan" 💀🐱⛏️`;
+    const text = `Naka-score ako ng ${score} sa Flappy Hachiware in Minecraft! Sabi sa akin: "kelangan mo na paamoy pwet mo kay allan" - ei shichh u lose 💀🐱⛏️`;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(text).then(() => {
         setCopied(true);
@@ -85,8 +75,8 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
           <p className="text-base sm:text-lg font-black text-red-700 leading-snug px-1 uppercase tracking-tight">
             &ldquo;kelangan mo na paamoy pwet mo kay allan&rdquo;
           </p>
-          <p className="text-xs text-amber-900/80 mt-1 italic">
-            {getAllanComment(score)}
+          <p className="text-xs sm:text-sm font-bold text-amber-950 mt-1 tracking-wide">
+            ei shichh u lose
           </p>
         </div>
 
